@@ -187,8 +187,8 @@ export default function Home() {
 
 	return (
 		<div className="flex flex-col min-h-screen w-screen">
-			<header className="fixed z-50 w-screen px-4 py-3 flex justify-between items-center bg-slate-50/50 backdrop-blur-sm">
-				<nav className="flex items-center gap-4 w-full justify-between">
+			<header className="fixed z-30 w-screen px-4 py-3 flex justify-between items-center bg-slate-50/50">
+				<nav className="flex items-center gap-4 w-full justify-between backdrop-blur-sm">
 					<div className="flex items-center gap-4 w-full justify-start">
 						<a href="#home" className="flex items-center gap-2">
 							<h1 className="text-2xl font-bold">SWBLENDS</h1>
@@ -277,14 +277,16 @@ export default function Home() {
 						/>
 					</div>
 					<div className="work-item-name absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-						<h1 className="text-7xl leading-none uppercase text-center font-medium text-white">{item.name}</h1>
+						<h1 className="lg:text-7xl leading-none uppercase text-center font-medium text-white text-4xl break-all">
+							{item.name}
+						</h1>
 					</div>
 				</section>
 			))}
 
-			<section id="contact" className="relative w-screen overflow-hidden h-[60svh] flex items-center justify-center p-8">
+			<section id="contact" className="relative w-screen overflow-hidden lg:h-[60svh] flex items-center justify-center p-8 h-screen">
 				<div className="text-center space-y-12 max-w-4xl mx-auto">
-					<h2 className="text-5xl leading-none uppercase text-center font-medium mb-8">Contact</h2>
+					<h2 className="lg:text-5xl leading-none uppercase text-center font-medium mb-8 text-4xl">Contact</h2>
 
 					<div className="grid md:grid-cols-2 gap-12 text-left">
 						{/* Contact Information */}
@@ -360,7 +362,7 @@ export default function Home() {
 
 			<section id="book" className="outro relative w-screen overflow-hidden h-svh flex items-center justify-center p-8">
 				<div className="text-center space-y-8">
-					<h1 className="text-6xl leading-none uppercase text-center font-medium mb-8">Book Your Appointment</h1>
+					<h1 className="lg:text-5xl leading-none uppercase text-center font-medium mb-8 text-4xl">Book Your Appointment</h1>
 					<div className="flex flex-col md:flex-row gap-6 justify-center items-center">
 						<a
 							href="https://trybe.au/swblends"
