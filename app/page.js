@@ -338,16 +338,16 @@ export default function Home() {
 
 						{/* Locations */}
 						<div className="space-y-6">
-							<h3 className="text-2xl font-semibold mb-4 text-gray-800 text-right">Our Locations</h3>
+							<h3 className="text-2xl font-semibold mb-4 text-gray-800 lg:text-right">Our Locations</h3>
 
 							<div className="space-y-4">
-								<div className="bg-gray-50 rounded-lg text-right">
+								<div className="bg-gray-50 rounded-lg lg:text-right">
 									<h4 className="font-semibold text-lg text-gray-800 mb-2">barXbar Location</h4>
 									<p className="text-gray-600">11-25 Wentworth Street</p>
 									<p className="text-gray-600">Manly, Sydney, NSW</p>
 								</div>
 
-								<div className="bg-gray-50 rounded-lg text-right">
+								<div className="bg-gray-50 rounded-lg lg:text-right">
 									<h4 className="font-semibold text-lg text-gray-800 mb-2">Main Shop Location</h4>
 									<p className="text-gray-600">16 Laurence Street</p>
 									<p className="text-gray-600">Manly, Sydney, NSW</p>
