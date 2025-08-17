@@ -79,7 +79,7 @@ export default function Home() {
 			const img = item.querySelector(".work-item-img");
 			const name = item.querySelector(".work-item-name h1");
 
-			const split = new SplitText(name, { type: "chars", mask: "chars" });
+			const split = new SplitText(name, { type: "words,chars", mask: "words" });
 			gsap.set(split.chars, { y: "125%" });
 
 			split.chars.forEach((char, index) => {
@@ -277,7 +277,7 @@ export default function Home() {
 						/>
 					</div>
 					<div className="work-item-name absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-						<h1 className="lg:text-7xl leading-none uppercase text-center font-medium text-white text-4xl break-all">
+						<h1 className="text-3xl sm:text-5xl lg:text-7xl leading-none uppercase text-center font-medium text-white whitespace-pre-line break-words">
 							{item.name}
 						</h1>
 					</div>

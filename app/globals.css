@@ -184,3 +184,16 @@ html {
 .work-item-img {
 	clip-path: polygon(25% 25%, 75% 40%, 100% 100%, 0 100%);
 }
+
+html,
+body {
+	overflow-x: hidden; /* stops horizontal scrollbars */
+	overflow-y: auto; /* keeps vertical scroll but hides scrollbar styling */
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+	display: none; /* Chrome, Safari */
+}
