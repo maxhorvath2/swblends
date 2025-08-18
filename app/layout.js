@@ -14,7 +14,6 @@ export const metadata = {
 		"Professional barbering and hair styling services in Manly, Sydney. Expert fade creations, classic cuts, and modern techniques. Book your appointment at our Wentworth Street or Laurence Street locations.",
 	keywords:
 		"barbering, hair styling, fade cuts, Manly barber, Sydney barber, men's haircuts, professional grooming, hair salon, barber manly, fade haircuts, classic cuts, modern barbering, SWBlends, men's haircuts manly, sydney barbering, barber shop manly, hair salon manly, barber near me, barbering services, hair styling manly, fade styles, classic barber cuts, modern haircuts, professional barbershop",
-	viewport: "width=device-width, initial-scale=1",
 	authors: [{ name: "SWBlends" }],
 	creator: "SWBlends",
 	publisher: "SWBlends",
