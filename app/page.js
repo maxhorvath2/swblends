@@ -24,22 +24,27 @@ const workItems = [
 	{
 		img: work01,
 		name: "ARTISTIC FADE CREATIONS",
+		alt: "Barbershop scene with 3 chairs",
 	},
 	{
 		img: work02,
 		name: "CLASSIC STYLE PERFECTION",
+		alt: "Barber creating a fade haircut",
 	},
 	{
 		img: work03,
 		name: "MODERN TECHNIQUE INNOVATION",
+		alt: "Full display of barber's tools",
 	},
 	{
 		img: work04,
 		name: "HERITAGE BARBERING SKILLS",
+		alt: "Led logo displaying 'Barber'",
 	},
 	{
 		img: work05,
 		name: "QUALITY SERVICE DELIVERY",
+		alt: "Barber using straight razor to shave client's beard",
 	},
 ];
 
@@ -268,13 +273,7 @@ export default function Home() {
 			{workItems.map((item, idx) => (
 				<section key={idx} className="work-item relative w-screen overflow-hidden h-[150svh]">
 					<div className="work-item-img absolute w-full h-full">
-						<Image
-							src={item.img}
-							alt={`Work Item ${idx + 1}`}
-							width="auto"
-							height="auto"
-							className="object-cover h-full w-full"
-						/>
+						<Image src={item.img} alt={item.alt} width="auto" height="auto" className="object-cover h-full w-full" />
 					</div>
 					<div className="work-item-name absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
 						<h1 className="text-3xl sm:text-5xl lg:text-7xl leading-none uppercase text-center font-medium text-white whitespace-pre-line break-words">
