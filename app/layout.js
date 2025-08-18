@@ -54,6 +54,7 @@ export default function RootLayout({ children }) {
 		<html lang="en">
 			<head>
 				<meta name="apple-mobile-web-app-title" content="SWBlends" />
+				<link rel="icon" href="/favicon.ico" />
 				<script
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{
