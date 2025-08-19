@@ -190,6 +190,18 @@ export default function Home() {
 		}
 	}, [mobileMenuOpen]);
 
+	useEffect(() => {
+		if (typeof window === "undefined") return;
+
+		gsap.to(".scroll-arrow", {
+			y: 15,
+			repeat: -1,
+			yoyo: true,
+			ease: "power1.inOut",
+			duration: 0.8,
+		});
+	}, []);
+
 	return (
 		<div className="flex flex-col min-h-screen w-screen">
 			<header className="fixed z-30 w-screen px-4 py-3 flex justify-between items-center bg-slate-50/50">
@@ -263,8 +275,21 @@ export default function Home() {
 			</header>
 
 			{/* HERO */}
-			<section id="home" className="hero relative w-screen overflow-hidden h-svh flex items-center justify-center p-8">
+			<section id="home" className="hero relative w-screen overflow-hidden h-svh flex flex-col items-center justify-center p-8">
 				<h1 className="text-7xl leading-none uppercase text-center font-medium">SWBlends</h1>
+
+				{/* Scroll Down Arrow */}
+				<div className="absolute bottom-12">
+					<svg
+						className="w-8 h-8 text-gray-800 animate-bounce"
+						fill="none"
+						stroke="currentColor"
+						strokeWidth="2"
+						viewBox="0 0 24 24"
+					>
+						<path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+					</svg>
+				</div>
 			</section>
 
 			<section id="work" className="h-0"></section>
@@ -367,9 +392,9 @@ export default function Home() {
 							href="https://trybe.au/swblends"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="group relative px-8 py-4 bg-black text-white rounded-lg hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+							className="group relative px-8 py-4 bg-black border-2 border-black  text-white rounded-lg hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
 						>
-							<span className="text-xl font-semibold">Book on Trybe</span>
+							<span className="text-xl font-semibold">Book at Home</span>
 							<span className="absolute bottom-0 left-0 w-0 h-1 bg-white transition-all duration-300 ease-out group-hover:w-full"></span>
 						</a>
 						<a
@@ -378,7 +403,7 @@ export default function Home() {
 							rel="noopener noreferrer"
 							className="group relative px-8 py-4 bg-white text-black border-2 border-black rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
 						>
-							<span className="text-xl font-semibold">Book on Fresha</span>
+							<span className="text-xl font-semibold">Book at BarXBar</span>
 							<span className="absolute bottom-0 left-0 w-0 h-1 bg-black transition-all duration-300 ease-out group-hover:w-full"></span>
 						</a>
 					</div>
