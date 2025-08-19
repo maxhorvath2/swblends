@@ -233,16 +233,16 @@ export default function Home() {
 				{/* Mobile menu backdrop */}
 				<div
 					ref={backdropRef}
-					className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm opacity-0 pointer-events-none lg:hidden"
+					className="fixed inset-0 z-40 bg-black/60 opacity-0 pointer-events-none lg:hidden"
 					onClick={() => setMobileMenuOpen(false)}
 				/>
 
-				{/* Mobile menu panel */}
+				{/* Mobile menu panel - FIXED STYLING */}
 				<div
 					ref={mobileMenuRef}
-					className="fixed inset-y-0 right-0 z-50 w-full max-w-sm bg-white/95 backdrop-blur-xl shadow-2xl transform translate-x-full lg:hidden"
+					className="fixed inset-y-0 right-0 z-50 w-full max-w-sm bg-white shadow-2xl transform translate-x-full lg:hidden"
 				>
-					<div className="flex items-center justify-between p-6 border-b border-gray-200/50">
+					<div className="flex items-center justify-between p-6 border-b border-gray-200">
 						<a
 							href="#home"
 							className="text-xl font-bold text-gray-900 hover:text-gray-700 transition-colors"
@@ -257,17 +257,17 @@ export default function Home() {
 							<X className="w-6 h-6" />
 						</button>
 					</div>
-					<div className="p-6 space-y-6">
+					<div className="p-6 space-y-4">
 						{navLinks.map((link, index) => (
 							<a
 								key={link.name}
 								href={link.href}
-								className="mobile-nav-link relative block text-xl font-medium text-gray-900 hover:text-gray-600 transition-all duration-300 hover:translate-x-2 overflow-hidden px-4 py-2 rounded-lg group"
+								className="mobile-nav-link relative block text-2xl font-medium text-gray-900 hover:text-gray-600 transition-all duration-300 hover:translate-x-2 px-4 py-3 rounded-lg group border-b border-gray-100 last:border-b-0"
 								onClick={() => setMobileMenuOpen(false)}
 								style={{ transitionDelay: `${index * 50}ms` }}
 							>
 								{link.name}
-								<span className="absolute w-0 h-1 bg-gray-800 rounded bottom-0 left-4 origin-left transition-all duration-300 ease-in-out group-hover:w-[calc(100%-2rem)]"></span>
+								<span className="absolute w-0 h-0.5 bg-gray-800 rounded bottom-2 left-4 origin-left transition-all duration-300 ease-in-out group-hover:w-[calc(100%-2rem)]"></span>
 							</a>
 						))}
 					</div>
