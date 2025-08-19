@@ -190,18 +190,6 @@ export default function Home() {
 		}
 	}, [mobileMenuOpen]);
 
-	useEffect(() => {
-		if (typeof window === "undefined") return;
-
-		gsap.to(".scroll-arrow", {
-			y: 15,
-			repeat: -1,
-			yoyo: true,
-			ease: "power1.inOut",
-			duration: 0.8,
-		});
-	}, []);
-
 	return (
 		<div className="flex flex-col min-h-screen w-screen">
 			<header className="fixed z-30 w-screen px-4 py-3 flex justify-between items-center bg-slate-50/50">
