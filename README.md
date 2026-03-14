@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SWBlends
+
+A modern portfolio/booking website for **SWBlends**, a professional barbershop located in Manly, Sydney. Built with Next.js 15 with a focus on smooth, high-quality animations.
+
+## Tech Stack
+
+- **Next.js 15** (App Router) with React 19
+- **TailwindCSS v4** — utility-first styling with custom CSS variables and dark mode support
+- **GSAP** (ScrollTrigger + SplitText) — scroll-based and character-level animations
+- **Lenis** — smooth scrolling integrated with GSAP ticker
+- **shadcn/ui** + **Headless UI** — accessible, composable UI components
+- **Radix UI** — low-level UI primitives
+- **Lucide React** — icon set
+- **Vercel Analytics & Speed Insights** — production monitoring
+- **next-sitemap** — automatic sitemap generation at build time
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server (with Turbopack):
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+|---|---|
+| `npm run dev` | Start dev server with Turbopack |
+| `npm run build` | Build for production (also generates sitemap) |
+| `npm start` | Start the production server |
+| `npm run lint` | Run ESLint |
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/
+  layout.js         # Root layout — fonts, metadata, analytics
+  page.js           # Main page — GSAP animations, smooth scroll, work showcase
+  globals.css       # TailwindCSS v4 config, design tokens, animation utilities
+  manifest.json     # PWA manifest
+assets/             # Portfolio work images
+components/
+  ui/               # Reusable UI components (Button, NavigationMenu, etc.)
+lib/
+  utils.js          # cn() utility for class merging
+public/             # Static assets, robots.txt, sitemap files
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Animation System
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The page uses a GSAP-driven animation layer:
 
-## Deploy on Vercel
+- **Lenis** provides physics-based smooth scrolling, hooked into `gsap.ticker` for frame-perfect sync.
+- **ScrollTrigger** drives scroll-linked entrance animations on work items and sections.
+- **SplitText** enables character-by-character text reveal effects.
+- Work items use **clip-path** transitions for cinematic image reveals.
+- The mobile menu uses staggered GSAP timelines for open/close.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The site is configured for deployment on **Vercel** at [swblends.com](https://swblends.com). The sitemap and `robots.txt` are auto-generated at build time via `next-sitemap`.
